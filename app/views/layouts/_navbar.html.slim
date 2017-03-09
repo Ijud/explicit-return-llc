@@ -1,0 +1,8 @@
+- if session[:user_id]
+  ul
+    li.first: a href=(user_path @user) #{User.find(session[:user_id]).username}
+    li.first: a href='/logout' Logout
+- else
+  ul
+    li.first: a href=(new_user_path) Register
+    li.first: a href=(new_session_path) Login
