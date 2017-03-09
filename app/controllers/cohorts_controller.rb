@@ -1,6 +1,5 @@
 class CohortsController < ApplicationController
   def new
-    @user = User.find(session[:user_id])
     @cohort = Cohort.new
   end
 
@@ -10,7 +9,7 @@ class CohortsController < ApplicationController
 
   def create
     @cohort = Cohort.new(cohort_params)
-    @cohort.user = User.first
+    @cohort.user = current_user
 
     params[:student_data][:students].split("\n").each do |name|
       @cohort.students.new(name: name.gsub(/\s/, ''))
