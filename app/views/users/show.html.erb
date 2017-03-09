@@ -10,9 +10,9 @@ Each cohort name will link to that cohort's profile page,
 where the groups will be listed -->
 
 <ul>
-  <% @cohort.each do |cohort| %>
-    <li><%= link_to "<%=cohort.name %>", cohort_path%></li>
+  <% @user.cohorts.each do |cohort| %>
+    <li><%= link_to cohort.name, cohort_path(cohort) %></li>
   <% end %>
 </ul>
 
-<!-- <li><%=link_to "cohorts", cohorts_path  %></li> -->
+<!-- <li>#<#%#=link_to "cohorts", cohorts_path  %></li> -->

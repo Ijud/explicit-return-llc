@@ -2,7 +2,7 @@ ul {
   list-style: none;
 }
 
-li {
+.first {
   display: inline-block;
   padding: 0px 10px;
 }
