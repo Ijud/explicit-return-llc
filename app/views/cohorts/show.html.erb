@@ -27,7 +27,7 @@
         <div class='group'>
           <h4 class='group__title'>Group <%= group + 1 %></h4>
           <ul>
-            <% @cohort.groupings.where(group_id: group).each do |g| %>
+            <% @cohort.groupings.where(grouping_id: grouping, group_id: group).each do |g| %>
               <li class='group__content'><%= g.student.name %></li>
             <% end %>
           </ul>

@@ -14,8 +14,8 @@ ul {
   float: left;
   background-color: #aaddee;
   border-radius: 16px;
+  border: 1px solid #aabbcc;
   border-top: 1.75em solid #aabbcc;
-  opacity: 0.85;
 }
 
 .group__title {
@@ -32,10 +32,11 @@ ul {
 }
 
 .grouping {
-  width: 100%;
+  display: inline-block;
+  width: 75%;
   background-color: #dddddd;
   border-radius: 16px;
-  opacity: 0.75;
+  margin: 24px;
 }
 
 .profile-title {
