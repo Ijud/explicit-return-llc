@@ -2,6 +2,29 @@ ul {
   list-style: none;
 }
 
+.group {
+  display: inline-block;
+  margin: 24px;
+  float: left;
+  background-color: #aaddee;
+  border-radius: 16px;
+  border-top: 1.75em solid #aabbcc;
+  opacity: 75%;
+}
+
+.group__title {
+  font-size: 1.75em;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  top: -1em;
+}
+
+.group__content {
+  position: relative;
+  top: -1em;
+}
+
 .first {
   display: inline-block;
   padding: 0px 10px;
