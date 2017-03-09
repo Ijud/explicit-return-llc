@@ -43,3 +43,22 @@ ul {
 	text-align: center;
 
 }
+
+.make-cohort-container {
+  margin: auto;
+  text-align: center;
+  background-color: #8FBC8F;
+  /*border: 1px solid red;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cohort-form-div {
+  margin: 12px 0px;
+}
+
+#title {
+  text-align: center;
+  font-size: 2em;
+}

@@ -1,13 +1,14 @@
-<h4>Make a new Cohort</h4>
-
-<%= form_for :cohort, url: cohorts_path do |f| %>
-  <div>
-    <%= f.label :name, 'Cohort name:' %><br>
-    <%= f.text_field :name, placeholder: 'Cohort name' %>
-  </div>
-  <div>
-    <%= label :student_data, :students, 'Student names' %><br>
-    <%= text_area :student_data, :students, size: '24x16' %>
-  </div>
-  <%= f.submit 'Create cohort' %>
-<% end %>
+<div class="make-cohort-container">
+  <h4 class="cohort-form-div">Make a New Cohort</h4>
+  <%= form_for :cohort, url: cohorts_path do |f| %>
+    <div class="cohort-form-div">
+      <%= f.label :name, 'Cohort name:' %><br>
+      <%= f.text_field :name, placeholder: 'Fireflies' %>
+    </div>
+    <div class="cohort-form-div">
+      <%= label :student_data, :students, 'Student names' %><br>
+      <%= text_area :student_data, :students, size: '30x16', placeholder: "Ian \nDylan \nJack" %>
+    </div>
+    <%= f.submit 'Create cohort' %>
+  <% end %>
+</div>
