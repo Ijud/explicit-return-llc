@@ -1,5 +1,6 @@
 class CohortsController < ApplicationController
   def new
+    @user = User.find(session[:user_id])
     @cohort = Cohort.new
   end
 
@@ -23,6 +24,7 @@ class CohortsController < ApplicationController
   end
 
   def index
+    @user = User.find(session[:user_id])
     @cohort = Cohort.all
   end
 

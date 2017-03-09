@@ -8,28 +8,15 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-<header class="navbar  navbar-inverse">
-    <div class="navbar-class">
-      <div class="container">
+<header>
+  <%= render partial: "layouts/navbar" %>
+</header>
 
 
       <!-- Collect the nav links, forms, and other content for toggling -->
 
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">HOME</a></li>
-          <li><%=link_to "register", new_user_path%></li>
-          <li><%=link_to "cohorts", cohorts_path  %></li>
-          <li><%=link_to "login", new_session_path %> </li>
-          <!-- <li>####link_to "logout", -->
-        </ul>
-
-
-      </div>
-    </div>
-  </header>
 
   <body>
-    <%= render partial: "layouts/navbar" %>
     <%= yield %>
   </body>
 </html>
