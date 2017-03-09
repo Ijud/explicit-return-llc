@@ -2,7 +2,7 @@ class GroupingsController < ApplicationController
 
   def create
     @cohort = Cohort.find(params[:cohort_id])
-    
+
     group_up(@cohort.students, params[:groupings][:size].to_i).each_with_index do |group, index|
       group.each do |student|
         @cohort.groupings.new(group_id: index, student: student)
@@ -23,11 +23,15 @@ class GroupingsController < ApplicationController
       Array.new(size) { students.shift }
     end
 
-    remainder.times do |i|
-      groups[i] << students.shift
+    if remainder > number_of_groups
+      groups << Array.new(remainder) { students.shift }
+    else
+      remainder.times do |i|
+        groups[i] << students.shift
+      end
     end
 
-    p groups
+    groups
   end
 
 end
