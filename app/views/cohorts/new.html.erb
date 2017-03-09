@@ -1,0 +1,13 @@
+<h1>Make a new Cohort</h1>
+
+<%= form_for :cohort, url: cohorts_path do |f| %>
+  <div>
+    <%= f.label :name, 'Cohort name:' %><br>
+    <%= f.text_field :name, placeholder: 'Cohort name' %>
+  </div>
+  <div>
+    <%= label :student_data, :students, 'Student names' %><br>
+    <%= text_area :student_data, :students, size: '24x16' %>
+  </div>
+  <%= f.submit 'Create cohort' %>
+<% end %>
