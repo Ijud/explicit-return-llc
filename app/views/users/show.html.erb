@@ -8,3 +8,11 @@ For each cohort, list (1) cohort name and (2) member count.
 
 Each cohort name will link to that cohort's profile page,
 where the groups will be listed -->
+
+<ul>
+  <% @cohort.each do |cohort| %>
+    <li><%= link_to "<%=cohort.name %>", cohort_path%></li>
+  <% end %>
+</ul>
+
+<!-- <li><%=link_to "cohorts", cohorts_path  %></li> -->
