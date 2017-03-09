@@ -22,6 +22,10 @@ class CohortsController < ApplicationController
     end
   end
 
+  def index
+    @cohort = Cohort.all
+  end
+
   private
     def cohort_params
       params.require(:cohort).permit(:name)
