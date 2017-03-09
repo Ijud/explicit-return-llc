@@ -1,7 +1,12 @@
 ul {
   list-style: none;
-  text-align: center;
 }
+
+html {
+    background: url(https://i.imgur.com/4OlgZbFh.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
 
 .group {
   display: inline-block;
@@ -65,8 +70,22 @@ ul {
 	text-align: center;
 
 }
-html {
-    background: url(https://i.imgur.com/4OlgZbFh.jpg) no-repeat center center fixed;
-    /*background-color: #cccccc;*/
-    background-size: cover;
+
+.make-cohort-container {
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
+.cohort-form-div {
+  margin: 0 auto;
+  border: 1px solid red;
+  width: 25%;
+}
+
+#title {
+  text-align: center;
+  font-size: 2em;
+  color: #fff;
