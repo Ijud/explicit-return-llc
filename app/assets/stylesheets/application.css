@@ -1,5 +1,6 @@
 ul {
   list-style: none;
+  text-align: center;
 }
 
 .group {
@@ -48,21 +49,23 @@ ul {
 	margin: auto;
 	width: 50%;
 	text-align: center;
+	display: inline-block;
+	margin-left: 75px;
 
 }
 
 .cohorts-list {
 	list-style: none;
-	margin: auto;
-	width: 50%;
-	text-align: center;
-	list-style: none;
-
 }
 
 .cohort-object {
+	display: inline;
 	margin: auto;
 	width: 50%;
 	text-align: center;
 
+}
+body {
+    background-image: url("https://i.imgur.com/4OlgZbFh.jpg");
+    /*background-color: #cccccc;*/
 }
