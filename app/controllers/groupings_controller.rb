@@ -3,9 +3,10 @@ class GroupingsController < ApplicationController
   def create
     @cohort = Cohort.find(params[:cohort_id])
 
+    grouping_id = @cohort.groupings.select(:grouping_id).group(:grouping_id).count.size
     group_up(@cohort.students, params[:groupings][:size].to_i).each_with_index do |group, index|
       group.each do |student|
-        @cohort.groupings.new(group_id: index, student: student)
+        @cohort.groupings.new(grouping_id: grouping_id, group_id: index, student: student)
       end
     end
 

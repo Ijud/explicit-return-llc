@@ -3,6 +3,11 @@ ul {
   text-align: center;
 }
 
+.first {
+  display: inline-block;
+  padding: 0px 10px;
+}
+
 .group {
   display: inline-block;
   margin: 24px;
@@ -26,9 +31,11 @@ ul {
   top: -1em;
 }
 
-.first {
-  display: inline-block;
-  padding: 0px 10px;
+.grouping {
+  width: 100%;
+  background-color: #dddddd;
+  border-radius: 16px;
+  opacity: 0.75;
 }
 
 .profile-title {
