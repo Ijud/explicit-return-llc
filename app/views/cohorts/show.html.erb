@@ -8,6 +8,7 @@
     </div>
     <%= f.submit 'Group your cohort!' %>
   <% end %>
+
 </div>
 <div>
   <h2>Student roster</h2>
@@ -19,7 +20,14 @@
 </div>
 <div>
   <h2>Groupings</h2>
-  <% @cohort.groupings.each do |grouping| %>
-    
+  <% @cohort.groupings.select(:group_id).order(:group_id).group(:group_id).count.size.times do |i| %>
+    <div class='group'>
+      <h3 class='group__title'>Group <%= i %></h3>
+      <ul>
+        <% @cohort.groupings.where(group_id: i).each do |grouping| %>
+          <li class='group__content'><%= grouping.student.name %></li>
+        <% end %>
+      </ul>
+    </div>
   <% end %>
 </div>

@@ -11,7 +11,7 @@ where the groups will be listed -->
 <div class="cohorts-container">
 <ul class="cohorts-list">
   <% @user.cohorts.each do |cohort| %>
-    <li class ="cohort-object"><%= link_to cohort.name, cohort_path(cohort) %></li>
+    <li class ="cohort-object"><%= link_to cohort.name, cohort_path(cohort) %></li><br>
   <% end %>
 </ul>
 </div>

@@ -2,6 +2,35 @@ ul {
   list-style: none;
 }
 
+html {
+    background: url(https://i.imgur.com/4OlgZbFh.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+.group {
+  display: inline-block;
+  margin: 24px;
+  float: left;
+  background-color: #aaddee;
+  border-radius: 16px;
+  border-top: 1.75em solid #aabbcc;
+  opacity: 0.85;
+}
+
+.group__title {
+  font-size: 1.75em;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  top: -1em;
+}
+
+.group__content {
+  position: relative;
+  top: -1em;
+}
+
 .first {
   display: inline-block;
   padding: 0px 10px;
@@ -25,19 +54,17 @@ ul {
 	margin: auto;
 	width: 50%;
 	text-align: center;
+	display: inline-block;
+	margin-left: 75px;
 
 }
 
 .cohorts-list {
 	list-style: none;
-	margin: auto;
-	width: 50%;
-	text-align: center;
-	list-style: none;
-
 }
 
 .cohort-object {
+	display: inline;
 	margin: auto;
 	width: 50%;
 	text-align: center;
@@ -47,18 +74,18 @@ ul {
 .make-cohort-container {
   margin: auto;
   text-align: center;
-  background-color: #8FBC8F;
-  /*border: 1px solid red;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .cohort-form-div {
-  margin: 12px 0px;
+  margin: 0 auto;
+  border: 1px solid red;
+  width: 25%;
 }
 
 #title {
   text-align: center;
   font-size: 2em;
-}
+  color: #fff;
