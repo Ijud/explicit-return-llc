@@ -22,11 +22,6 @@ class CohortsController < ApplicationController
     end
   end
 
-  def index
-    @user = User.find(session[:user_id])
-    @cohort = Cohort.all
-  end
-
   private
     def cohort_params
       params.require(:cohort).permit(:name)
