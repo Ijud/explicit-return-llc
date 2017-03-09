@@ -6,8 +6,8 @@
     <%= f.text_field :name, placeholder: 'Cohort name' %>
   </div>
   <div>
-    <%= f.label :student_list, 'Student names' %><br>
-    <%= f.text_area :student_list, cols: '24', rows: '16' %>
+    <%= label :student_data, :students, 'Student names' %><br>
+    <%= text_area :student_data, :students, size: '24x16' %>
   </div>
   <%= f.submit 'Create cohort' %>
 <% end %>
