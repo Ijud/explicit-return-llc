@@ -30,14 +30,11 @@ ul {
 
 .cohorts-list {
 	list-style: none;
-	margin: auto;
-	width: 50%;
-	text-align: center;
-	list-style: none;
 
 }
 
 .cohort-object {
+	display: inline;
 	margin: auto;
 	width: 50%;
 	text-align: center;
