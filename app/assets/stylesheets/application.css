@@ -6,3 +6,40 @@ ul {
   display: inline-block;
   padding: 0px 10px;
 }
+
+.profile-title {
+	margin: auto;
+	width: 50%;
+	text-align: center;
+
+}
+
+.profile-subtitle {
+	margin: auto;
+	width: 50%;
+	text-align: center;
+
+}
+
+.cohorts-container {
+	margin: auto;
+	width: 50%;
+	text-align: center;
+
+}
+
+.cohorts-list {
+	list-style: none;
+	margin: auto;
+	width: 50%;
+	text-align: center;
+	list-style: none;
+
+}
+
+.cohort-object {
+	margin: auto;
+	width: 50%;
+	text-align: center;
+
+}
