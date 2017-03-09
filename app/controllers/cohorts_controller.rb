@@ -9,8 +9,7 @@ class CohortsController < ApplicationController
 
   def create
     @cohort = Cohort.new(cohort_params)
-    p @cohort.students
-    # @cohort.user = current_user
+    @cohort.user = User.first
     if @cohort.save
       redirect_to @cohort
     else
@@ -20,6 +19,6 @@ class CohortsController < ApplicationController
 
   private
     def cohort_params
-      params.require(:cohort).permit(:name, :student_data)
+      params.require(:cohort).permit(:name, :student_list)
     end
 end
