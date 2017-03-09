@@ -1,6 +1,25 @@
 <h1><%= @cohort.name %></h1>
-<ul>
-  <% @cohort.students.each do |student| %>
-    <li><%= student.name %></li>
+<div>
+  <%= form_for :groupings, url: cohort_groupings_path(@cohort) do |f| %>
+    <div>
+      <%= f.label :size, 'Size' %>
+      <%= f.label :size, class: 'group-size__label' %>
+      <%= f.range_field :size, class: 'group-size', min: '3', max: '6', value: '3' %>
+    </div>
+    <%= f.submit 'Group your cohort!' %>
   <% end %>
-</ul>
+</div>
+<div>
+  <h2>Student roster</h2>
+  <ul>
+    <% @cohort.students.each do |student| %>
+      <li><%= student.name %></li>
+    <% end %>
+  </ul>
+</div>
+<div>
+  <h2>Groupings</h2>
+  <% @cohort.groupings.each do |grouping| %>
+    
+  <% end %>
+</div>
