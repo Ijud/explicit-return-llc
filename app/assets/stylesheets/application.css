@@ -7,15 +7,14 @@ html {
     background-size: cover;
 }
 
-
 .group {
   display: inline-block;
   margin: 24px;
   float: left;
   background-color: #aaddee;
   border-radius: 16px;
+  border: 1px solid #aabbcc;
   border-top: 1.75em solid #aabbcc;
-  opacity: 0.85;
 }
 
 .group__title {
@@ -31,9 +30,12 @@ html {
   top: -1em;
 }
 
-.first {
+.grouping {
   display: inline-block;
-  padding: 0px 10px;
+  width: 75%;
+  background-color: #dddddd;
+  border-radius: 16px;
+  margin: 24px;
 }
 
 .profile-title {
