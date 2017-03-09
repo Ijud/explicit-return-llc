@@ -1,6 +1,6 @@
-- if session[:user_id]
+- if logged_in?
   ul
-    li.first: a href=(user_path @user) #{User.find(session[:user_id]).username}
+    li.first: a href=(user_path current_user) #{current_user.username}
     li.first: a href=(new_cohort_path) New Cohort
     li.first: a href='/logout' Logout
 - else
