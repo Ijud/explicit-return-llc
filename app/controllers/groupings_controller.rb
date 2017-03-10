@@ -1,5 +1,9 @@
 class GroupingsController < ApplicationController
 
+  def show
+
+  end
+
   def create
     @cohort = Cohort.find(params[:cohort_id])
 

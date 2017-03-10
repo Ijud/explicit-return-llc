@@ -27,7 +27,7 @@
 
 <% @cohort.groupings.select(:grouping_id).order(:grouping_id).group(:grouping_id).count.size.times do |grouping| %>
   <div class='grouping'>
-    <h3>Grouping <%= grouping + 1 %></h3>
+    <h3><%= link_to "Groupings #{grouping + 1}", cohort_grouping_path(@cohort) %></h3>
     <% @cohort.groupings.select(:group_id).where(grouping_id: grouping).order(:group_id).group(:group_id).count.size.times do |group| %>
       <div class='group'>
         <h4 class='group__title'>Group <%= group + 1 %></h4>
