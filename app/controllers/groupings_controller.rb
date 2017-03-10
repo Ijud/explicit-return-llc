@@ -1,11 +1,19 @@
 class GroupingsController < ApplicationController
 
+  def show
+    @cohort = Cohort.find(params[:cohort_id])
+    @grouping_id = params[:id].to_i - 1
+  end
+
   def create
     @cohort = Cohort.find(params[:cohort_id])
 
     grouping_id = @cohort.groupings.select(:grouping_id).group(:grouping_id).count.size
-    group_up(@cohort.students, params[:groupings][:size].to_i).each_with_index do |group, index|
-      group.each do |student|
+    while Grouping.find_by(cohort: @cohort, grouping_id: grouping_id)
+      grouping_id += 1
+    end
+    group_up(@cohort.students, params[:groupings][:size].to_i).each_with_index do |grp, index|
+      grp.each do |student|
         @cohort.groupings.new(grouping_id: grouping_id, group_id: index, student: student)
       end
     end
@@ -36,10 +44,15 @@ class GroupingsController < ApplicationController
   end
 
   def destroy
-    @grouping = Grouping.find(params[:id])
-    @cohort = @grouping.cohort
-    @grouping.destroy
-    redirect_to cohort_path(@cohort)
+    cohort = Cohort.find(params[:cohort_id])
+    grouping_id = params[:id].to_i - 1
+    cohort.groupings.select(:group_id).where(grouping_id: grouping_id).group(:group_id).count.size.times do |grp|
+      cohort.groupings.where(grouping_id: grouping_id, group_id: grp).each do |g|
+        g.destroy
+      end
+    end
+
+    redirect_to cohort
   end
 
   # private
