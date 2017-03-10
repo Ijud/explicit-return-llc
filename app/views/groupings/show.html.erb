@@ -1,0 +1,28 @@
+<h1 align='center'><%= @cohort.name %></h1>
+
+<div class="groupings">
+
+  <div class="grouping">
+    <h5 align='center'>Grouping <%= @grouping_id + 1 %></h5>
+    <% @cohort.groupings.select(:group_id).where(grouping_id: @grouping_id).group(:group_id).count.size.times do |grp| %>
+      <div class="group">
+        <h5 class='group__title'>Group <%= grp + 1 %></h5>
+        <ul>
+          <% @cohort.groupings.where(grouping_id: @grouping_id, group_id: grp).each do |g| %>
+            <li class="group__content"><%= g.student.name %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+  <div class="grouping">
+    <h5 align="center">Plaintext</h5>
+    <textarea class='code' rows="8" cols="20"><%= groupings_plaintext(@cohort, @grouping_id) %></textarea>
+  </div>
+
+  <div class="grouping">
+    <h5 align="center">Markdown</h5>
+    <textarea class='code' rows="8" cols="20"><%= groupings_markdown(@cohort, @grouping_id) %></textarea>
+
+  </div>
+</div>

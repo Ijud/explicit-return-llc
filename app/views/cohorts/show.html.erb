@@ -24,25 +24,25 @@
   </div>
 </div>
 
-
 <!-- <h4 align='center' class="groupings-link">Groupings</h4> -->
 <div class='groupings'>
 
-<% @cohort.groupings.select(:grouping_id).order(:grouping_id).group(:grouping_id).count.size.times do |grouping| %>
+<% @cohort.groupings.select(:grouping_id).group(:grouping_id).count.size.times do |grouping| %>
   <div class='grouping'>
-    <h5 align='center'><%= link_to "Groupings #{grouping + 1}", cohort_grouping_path(@cohort) %></h5>
-    <%= link_to 'Delete', cohort_grouping_path(@cohort, grouping), data: {confirm: 'Are you sure?'}, method: "delete" %>
-    
-    <% @cohort.groupings.select(:group_id).where(grouping_id: grouping).order(:group_id).group(:group_id).count.size.times do |group| %>
+    <h5 align='center'><%= link_to "Grouping #{grouping + 1}", cohort_grouping_path(@cohort, grouping + 1) %></h5>
+
+    <% @cohort.groupings.select(:group_id).where(grouping_id: grouping).group(:group_id).count.size.times do |grp| %>
       <div class='group'>
-        <h5 class='group__title'>Group <%= group + 1 %></h5>
+        <h5 class='group__title'>Group <%= grp + 1 %></h5>
         <ul>
-          <% @cohort.groupings.where(grouping_id: grouping, group_id: group).each do |g| %>
+          <% @cohort.groupings.where(grouping_id: grouping, group_id: grp).each do |g| %>
             <li class='group__content'><%= g.student.name %></li>
           <% end %>
         </ul>
       </div>
     <% end %>
+
+    <%= link_to 'Delete', cohort_grouping_path(@cohort, grouping + 1), data: {confirm: 'Are you sure?'}, method: "delete" %>
 
   </div>
 <% end %>
