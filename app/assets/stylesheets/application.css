@@ -2,8 +2,8 @@ ul {
   list-style: none;
 }
 
-html {
-    background: url(https://i.imgur.com/4OlgZbFh.jpg) no-repeat center center fixed;
+body {
+    background: url(https://i.imgur.com/4OlgZbFh.jpg) no-repeat top center;
     background-size: cover;
 }
 
