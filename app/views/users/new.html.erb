@@ -1,5 +1,6 @@
-<h4>User Registration</h4>
+<div class="user-form">
 
+<h4>User Registration</h4>
 <%= form_for @user do |f| %>
   <%= f.label :username %>:
   <%= f.text_field :username %><br>
@@ -9,3 +10,5 @@
   <%= f.password_field :password %><br>
   <%= f.submit %>
   <% end %>
+
+</div>

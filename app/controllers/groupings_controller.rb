@@ -39,4 +39,16 @@ class GroupingsController < ApplicationController
     groups
   end
 
+  def destroy
+    @grouping = Grouping.find(params[:id])
+    @cohort = @grouping.cohort
+    @grouping.destroy
+    redirect_to cohort_path(@cohort)
+  end
+
+  # private
+  #   def grouping_params
+  #     params.require(:grouping).permit(:grouping_id, :cohort_id, :group_id, :student_id)
+  #   end
+
 end

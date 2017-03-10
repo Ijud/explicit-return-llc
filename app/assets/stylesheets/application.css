@@ -7,10 +7,6 @@ body {
     background-size: cover;
 }
 
-.first {
-  display: inline-block;
-  padding: 0px 10px;
-}
 
 .group {
   display: inline-block;
@@ -18,8 +14,8 @@ body {
   float: left;
   background-color: #aaddee;
   border-radius: 16px;
-  border: 1px solid #aabbcc;
   border-top: 1.75em solid #aabbcc;
+  opacity: 0.85;
 }
 
 .group__title {
@@ -35,13 +31,6 @@ body {
   top: -1em;
 }
 
-.grouping {
-  display: inline-block;
-  width: 75%;
-  background-color: #dddddd;
-  border-radius: 16px;
-  margin: 24px;
-}
 
 .profile-title {
 	margin: auto;
@@ -63,10 +52,11 @@ body {
 
 .cohort-object {
 	display: inline;
-	margin: auto;
+	margin: auto 10px;
 	width: 50%;
 	text-align: center;
-
+  background: #aaddee;
+  border-radius: 10px;
 }
 
 /*---------------------*/
@@ -113,6 +103,7 @@ body {
   opacity: 0.85;
 }
 
+
 .cohort-form-div:last-child {
   background: none;
 }
@@ -137,6 +128,7 @@ body {
 }
 
 .show-cohort-container div {
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -150,4 +142,24 @@ body {
 .groupings {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 10%;
+  /*border: 1px solid red;*/
 }
+
+.user-form {
+  text-align:center;
+  background: #aaddee;
+  margin: 0 35%;
+  padding: 10px 0;
+  border-radius: 10px;
+  opacity: 0.85;
+}
+
+.user-form input {
+  margin: 10px;
+}
+
+/*.roster-container div {
+display: inline-block;
+}*/
