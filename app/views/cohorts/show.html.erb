@@ -11,6 +11,7 @@
       <%= f.submit "Group 'em!" %>
     <% end %>
   </div>
+
   <div>
     <h4>Roster</h4>
     <ul>
@@ -19,22 +20,25 @@
       <% end %>
     </ul>
   </div>
-  <div class='groupings'>
-    <h2 class="groupings-link">Groupings</h2>
-    <% @cohort.groupings.select(:grouping_id).order(:grouping_id).group(:grouping_id).count.size.times do |grouping| %>
-      <div class='grouping'>
-        <h3>Grouping <%= grouping + 1 %></h3>
-        <% @cohort.groupings.select(:group_id).where(grouping_id: grouping).order(:group_id).group(:group_id).count.size.times do |group| %>
-          <div class='group'>
-            <h4 class='group__title'>Group <%= group + 1 %></h4>
-            <ul>
-              <% @cohort.groupings.where(grouping_id: grouping, group_id: group).each do |g| %>
-                <li class='group__content'><%= g.student.name %></li>
-              <% end %>
-            </ul>
-          </div>
-        <% end %>
+</div>
 
+<h4 align='center' class="groupings-link">Groupings</h4>
+<div class='groupings'>
+
+<% @cohort.groupings.select(:grouping_id).order(:grouping_id).group(:grouping_id).count.size.times do |grouping| %>
+  <div class='grouping'>
+    <h3>Grouping <%= grouping + 1 %></h3>
+    <% @cohort.groupings.select(:group_id).where(grouping_id: grouping).order(:group_id).group(:group_id).count.size.times do |group| %>
+      <div class='group'>
+        <h4 class='group__title'>Group <%= group + 1 %></h4>
+        <ul>
+          <% @cohort.groupings.where(grouping_id: grouping, group_id: group).each do |g| %>
+            <li class='group__content'><%= g.student.name %></li>
+          <% end %>
+        </ul>
       </div>
     <% end %>
+
   </div>
+<% end %>
+</div>
