@@ -23,11 +23,12 @@ ActiveRecord::Schema.define(version: 20170309182726) do
   end
 
   create_table "groupings", force: :cascade do |t|
-    t.integer  "cohort_id",  null: false
-    t.integer  "group_id",   null: false
-    t.integer  "student_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "grouping_id", null: false
+    t.integer  "cohort_id",   null: false
+    t.integer  "group_id",    null: false
+    t.integer  "student_id",  null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "students", force: :cascade do |t|
