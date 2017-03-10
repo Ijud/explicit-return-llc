@@ -19,8 +19,8 @@
   </ul>
 </div>
 <div>
-<<<<<<< HEAD
-  <h2>Groupings</h2>
+
+  <h2 class="groupings-link">Groupings</h2>
   <% @cohort.groupings.select(:grouping_id).order(:grouping_id).group(:grouping_id).count.size.times do |grouping| %>
     <div class='grouping'>
       <h3>Grouping <%= grouping + 1 %></h3>
@@ -34,17 +34,7 @@
           </ul>
         </div>
       <% end %>
-=======
-  <h2 class="groupings-link">Groupings</h2>
-  <% @cohort.groupings.select(:group_id).order(:group_id).group(:group_id).count.size.times do |i| %>
-    <div class='group'>
-      <h3 class='group__title'>Group <%= i %></h3>
-      <ul>
-        <% @cohort.groupings.where(group_id: i).each do |grouping| %>
-          <li class='group__content'><%= grouping.student.name %></li>
-        <% end %>
-      </ul>
->>>>>>> 0b17620aefb3a595c6e42331513786968627222d
+
     </div>
   <% end %>
 </div>
