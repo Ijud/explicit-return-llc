@@ -1,19 +1,22 @@
-<h4 class="profile-title">Profile Page</h4>
+<!-- <h4 class="profile-title">Profile Page</h4> -->
+<div class="show-cohorts-container">
 
-<p class="profile-subtitle">Here are your cohorts:</p>
+  <h4 class="profile-subtitle">Your Cohorts:</h4>
 
-<!-- Insert loop iterating over the cohorts
+  <!-- Insert loop iterating over the cohorts
 
-For each cohort, list (1) cohort name and (2) member count.
+  For each cohort, list (1) cohort name and (2) member count.
 
-Each cohort name will link to that cohort's profile page,
-where the groups will be listed -->
-<div class="cohorts-container">
-<ul class="cohorts-list">
-  <% @user.cohorts.each do |cohort| %>
-    <li class ="cohort-object"><%= link_to cohort.name, cohort_path(cohort) %></li><br>
-  <% end %>
-</ul>
+  Each cohort name will link to that cohort's profile page,
+  where the groups will be listed -->
+  <div class="cohorts-container">
+  <!-- <ul class="cohorts-list"> -->
+    <% @user.cohorts.each do |cohort| %>
+      <p class ="cohort-object"><%= link_to cohort.name, cohort_path(cohort) %></p>
+    <% end %>
+  <!-- </ul> -->
+  </div>
+
 </div>
 
 <!-- <li>#<#%#=link_to "cohorts", cohorts_path  %></li> -->

@@ -57,15 +57,6 @@ body {
 
 }
 
-.cohorts-container {
-	margin: auto;
-	width: 50%;
-	text-align: center;
-	display: inline-block;
-	margin-left: 75px;
-
-}
-
 .cohorts-list {
 	list-style: none;
 }
@@ -78,6 +69,32 @@ body {
 
 }
 
+/*---------------------*/
+
+#title {
+  text-align: center;
+  font-size: 3em;
+  color: #fff;
+  margin: 10px 38% 0px 38%;
+  background: #aaddee;
+  color: #292b2c;
+  border-radius: 10px;
+  opacity: 0.85;
+}
+
+.first {
+  display: inline-block;
+  margin: auto 10px;
+  padding: 0px 10px;
+  background: #aaddee;
+  border-radius: 5px;
+  opacity: 0.85;
+}
+
+.first a {
+  color: #292b2c;
+}
+
 .make-cohort-container {
   margin: auto;
   text-align: center;
@@ -86,13 +103,51 @@ body {
   justify-content: center;
 }
 
+
 .cohort-form-div {
-  margin: 0 auto;
-  border: 1px solid red;
+  margin: 10px auto;
+  padding: 5px;
   width: 25%;
+  background: #aaddee;
+  border-radius: 5px;
+  opacity: 0.85;
 }
 
-#title {
+.cohort-form-div:last-child {
+  background: none;
+}
+
+.show-cohorts-container {
   text-align: center;
-  font-size: 2em;
-  color: #fff;
+}
+
+.show-cohorts-container p {
+  font-size: 2.5em;
+  padding: 0 20px;
+}
+
+.show-cohort-container {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 30%;
+  background: #aaddee;
+  opacity: 0.85;
+  border-radius: 10px;
+}
+
+.show-cohort-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.show-cohort-container div:last-child li {
+  padding-right: 35px;
+  font-size: 1.1em;
+}
+
+.groupings {
+  display: flex;
+  justify-content: center;
+}
