@@ -7,6 +7,10 @@ body {
     background-size: cover;
 }
 
+.first {
+  display: inline-block;
+  padding: 0px 10px;
+}
 
 .group {
   display: inline-block;
@@ -14,8 +18,8 @@ body {
   float: left;
   background-color: #aaddee;
   border-radius: 16px;
+  border: 1px solid #aabbcc;
   border-top: 1.75em solid #aabbcc;
-  opacity: 0.85;
 }
 
 .group__title {
@@ -31,6 +35,13 @@ body {
   top: -1em;
 }
 
+.grouping {
+  display: inline-block;
+  width: 75%;
+  background-color: #dddddd;
+  border-radius: 16px;
+  margin: 24px;
+}
 
 .profile-title {
 	margin: auto;
