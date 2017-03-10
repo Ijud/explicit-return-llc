@@ -8,7 +8,7 @@ end
 
 get 'logout', to: "sessions#destroy"
 
-root 'cohorts#new'
+root 'sessions#new'
 
 
 end
