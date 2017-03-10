@@ -1,12 +1,12 @@
-<h4>Login</h4>
-<div class="form">
-<%= form_for @user, url: '/sessions', method: 'post' do |f| %>
-  <%= f.label :email %>
-  <%= f.text_field :email %><br>
+<div class="form user-form">
+  <h4>Login</h4>
+  <%= form_for @user, url: '/sessions', method: 'post' do |f| %>
+    <%= f.label :email %>
+    <%= f.text_field :email %><br>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %><br>
+    <%= f.label :password %>
+    <%= f.password_field :password %><br>
 
-  <%= f.submit "Login" %>
-<% end %>
+    <%= f.submit "Login" %>
+  <% end %>
 </div>

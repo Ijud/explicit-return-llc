@@ -22,7 +22,7 @@
   </div>
 </div>
 
-  <h2 align='center'>Groupings</h2>
+  <h4 align='center'>Groupings</h4>
   <div class="groupings">
     <% @cohort.groupings.select(:group_id).order(:group_id).group(:group_id).count.size.times do |i| %>
       <div class='group'>

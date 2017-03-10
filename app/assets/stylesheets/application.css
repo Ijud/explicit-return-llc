@@ -140,3 +140,11 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.user-form {
+  border: 1px solid red;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
