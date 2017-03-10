@@ -19,7 +19,7 @@
   </ul>
 </div>
 <div>
-  <h2>Groupings</h2>
+  <h2 class="groupings-link">Groupings</h2>
   <% @cohort.groupings.select(:group_id).order(:group_id).group(:group_id).count.size.times do |i| %>
     <div class='group'>
       <h3 class='group__title'>Group <%= i %></h3>
