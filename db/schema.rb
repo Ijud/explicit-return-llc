@@ -10,25 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170309182726) do
+ActiveRecord::Schema.define(version: 20170310202822) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "uuid-ossp"
 
   create_table "cohorts", force: :cascade do |t|
-    t.integer  "user_id",    null: false
-    t.string   "name",       null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "user_id",                                          null: false
+    t.string   "name",                                             null: false
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
+    t.uuid     "uuid",       default: -> { "uuid_generate_v4()" }
   end
 
   create_table "groupings", force: :cascade do |t|
-    t.integer  "grouping_id", null: false
-    t.integer  "cohort_id",   null: false
-    t.integer  "group_id",    null: false
-    t.integer  "student_id",  null: false
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "grouping_id",                                       null: false
+    t.integer  "cohort_id",                                         null: false
+    t.integer  "group_id",                                          null: false
+    t.integer  "student_id",                                        null: false
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
+    t.uuid     "uuid",        default: -> { "uuid_generate_v4()" }
   end
 
   create_table "students", force: :cascade do |t|
